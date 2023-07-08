@@ -1,6 +1,14 @@
-name: Test React App
-on:push
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
 jobs:
-runs-on: ubuntu-latest
-steps:
-- name : Ger Repo Code
+  build-and-test:
+    runs-on: ubuntu-latest
+
