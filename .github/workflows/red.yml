@@ -36,7 +36,6 @@ jobs:
       with:
         node-version: '14'
     
-    # If you are deploying to a server, you could use the scp action to copy your build files to your server
     - name: Deploy to Server
       uses: appleboy/scp-action@master
       with:
@@ -45,8 +44,3 @@ jobs:
         password: ${{ secrets.SERVER_PASS }}
         source: "build/*"
         target: "/path/to/deploy/directory/on/server"
-
-
-
-      
-
